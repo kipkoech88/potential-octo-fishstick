@@ -9,4 +9,16 @@ const typeDefs = `#graphql
     type Query{
         books: [Book]
     }
-`
+`;
+
+//data
+const books = [
+    {
+        title: "DDOS",
+        author: "Hosea"
+    },
+    {
+        title: "Ping of Death",
+        author: "Kipngetich"
+    }
+]
