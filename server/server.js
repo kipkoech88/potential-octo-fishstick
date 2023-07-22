@@ -31,3 +31,8 @@ const resolvers ={
     }
 };
 
+//creating server instance
+const server = new ApolloServer({
+    typeDefs,
+    resolvers
+});
