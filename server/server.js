@@ -22,3 +22,12 @@ const books = [
         author: "Kipngetich"
     }
 ]
+
+
+//resolvers
+const resolvers ={
+    Query:{
+        books: ()=> books
+    }
+};
+
