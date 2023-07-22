@@ -1,5 +1,5 @@
 import {ApolloServer} from '@apollo/server';
-import {StandaloneServer} from '@apollo/server/standalone';
+import {StandaloneServer, startStandaloneServer} from '@apollo/server/standalone';
 
 const typeDefs = `#graphql
     type Book{
@@ -36,3 +36,9 @@ const server = new ApolloServer({
     typeDefs,
     resolvers
 });
+
+const {url} = await startStandaloneServer(server,{
+    listen:{port: 4000},
+});
+
+console.log(`Server ready at port ${url}`)
