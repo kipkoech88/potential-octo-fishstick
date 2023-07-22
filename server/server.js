@@ -1,13 +1,16 @@
 import {ApolloServer} from '@apollo/server';
-import {StandaloneServer, startStandaloneServer} from '@apollo/server/standalone';
+import {startStandaloneServer} from '@apollo/server/standalone';
 
-const typeDefs = `#graphql
+const typeDefs =`#graphql
     type Book{
         title: String,
         author: String
     },
     type Query{
         books: [Book]
+    },
+    type Mutations{
+        addBook(title: String, author: String): Book
     }
 `;
 
